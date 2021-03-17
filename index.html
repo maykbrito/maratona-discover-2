@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>JobsCalc</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/pages/index.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="scripts/index.js" defer></script>
+  </head>
+  <body id="page-index">
+    <div id="container">
+      <header class="page-header">
+
+        <section id="top">
+          <h2 class="sr-only">Homepage</h2>
+          <img id="logo" src="./images/logo.svg" alt="Logo" />
+          <span id="notification">
+            <img src="./images/alert-octagon.svg" alt="Alerta" />
+            Você tem 2 horas livres no seu dia
+          </span>
+          <a href="#" id="avatar-profile">
+            <p>Jakeliny <span>Ver perfil</span></p>
+            <img
+              src="https://avatars.githubusercontent.com/u/17316392?s=460&u=6912a91a70bc89745a2079fdcdad3bc3ce370f13&v=4"
+            />
+          </a>
+        </section>
+
+        <section id="summary">
+          <h2 class="sr-only">Sumário</h2>
+
+          <div class="info">
+            <div class="total">
+              <strong>12</strong>
+              Projetos ao total
+            </div>
+            <div class="in-progress">
+              <strong>7</strong>
+              Em andamento
+            </div>
+            <div class="finished">
+              <strong>4</strong>
+              Encerrados
+            </div>
+          </div>
+          <button>
+            <img src="./images/plus-24.svg" alt="Novo Job" /> Adicionar novo job
+          </button>
+        </section>
+      </header>
+
+      <main>
+        <h1 class="sr-only">Trabalhos</h1>
+
+        <div class="cards">
+          <div class="card">
+            <div class="id">
+              1
+            </div>
+            <div class="name">
+              <h3>Pizzaria Guloso</h3>
+            </div>
+            <div class="deadline">
+              <span>Prazo</span>
+              <strong>3 dias para a entrega</strong>
+            </div>
+            <div class="amount">
+              <span>Valor</span>
+              <strong>R$ 4500,00</strong>
+            </div>
+            <div class="status">
+              <span>Em andamento</span>
+            </div>
+            <div class="actions">
+              <p class="sr-only">Ações</p>
+              <button class="edit" title="Editar Job"><img src="./images/edit-24.svg" alt="Editar Job"></button>
+              <button class="delete" title="Excluir Job"><img src="./images/trash-24.svg" alt="Excluir Job"></button>
+            </div>
+          </div> <!-- end card -->
+        
+          <div class="card">
+            <div class="id">
+              1
+            </div>
+            <div class="name">
+              <h3>Pizzaria Guloso</h3>
+            </div>
+            <div class="deadline">
+              <span>Prazo</span>
+              <strong>3 dias para a entrega</strong>
+            </div>
+            <div class="amount">
+              <span>Valor</span>
+              <strong>R$ 4500,00</strong>
+            </div>
+            <div class="status">
+              <span>Em andamento</span>
+            </div>
+            <div class="actions">
+              <p class="sr-only">Ações</p>
+              <button class="edit" title="Editar Job"><img src="./images/edit-24.svg" alt="Editar Job"></button>
+              <button class="delete" title="Excluir Job"><img src="./images/trash-24.svg" alt="Excluir Job"></button>
+            </div>
+          </div>
+        </div><!-- end cards -->
+      </main>
+    </div>
+    <!-- end container -->
+  </body>
+</html>
