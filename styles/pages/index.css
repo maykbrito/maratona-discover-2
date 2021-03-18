@@ -1,146 +1,270 @@
-#page-index #container {
-  width: 100vw;
-  height: 100vh;
-}
-
-#search-teachers {
-  margin-top: 3.2rem;
-}
-
-#search-teachers label {
-  color: var(--color-text-in-primary)
-}
-
-#search-teachers .select-block {
-  margin-bottom: 1.4rem;
-}
-
-#page-index main {
-  margin: 3.2rem auto;
-  width: 90%;
-}
-
-.teacher-item {
-  background: var(--color-box-base);
-  border: 1px solid var(--color-line-in-white);
-  border-radius: .8rem;
-  margin-top: 2.4rem;
-  overflow: hidden;
-}
-
-.teacher-item header {
-  padding: 3.2rem 2rem;
+#top {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.teacher-item header img {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
+#logo {
+  width: 13rem;
+  height: 3rem;
 }
 
-.teacher-item header div strong {
-  font: 700 2.4rem Archivo;
-  display: block;
-  color: var(--color-text-title);
-}
-
-.teacher-item header div span {
-  font-size: 1.6rem;
-  display: block;
-  margin-top: .4rem;
-}
-
-.teacher-item header div span strong {
-  font-size: 1.6rem;
-  display: inline;
-}
-
-.teacher-item>p {
-  padding: 0 2rem;
-}
-
-.teacher-item footer {
-  padding: 3.2rem 2rem;
-  background: var(--color-box-footer);
-  border-top: 1px solid var(--color-line-in-white);
-  margin-top: 3.2rem;
-  text-align: center;
-}
-
-.teacher-item footer p {
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  color: var(--color-text-complement);
-}
-
-.teacher-item footer p strong {
-  font-size: 1.6rem;
-  color: var(--color-primary);
-  margin-left: 0.8rem;
-}
-
-.teacher-item footer .button {
-  width: 100%;
-  height: 5.6rem;
-  background: var(--color-secundary);
-  color: var(--color-button-text);
-  border: 0;
-  border-radius: .8rem;
-  cursor: pointer;
-  font: 700 1.6rem Archivo;
+/* 
+ * notification
+/* -------------------------------------------------- */
+#notification {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#notification img {
+  margin-right: 0.5rem; /* 8px of 16px root*/
+}
+
+/* 
+ * avatar
+/* -------------------------------------------------- */
+#avatar-profile {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
   text-decoration: none;
-  transition: 0.2s;
-  margin-top: 1.6rem;
+
+  font-family: IBM Plex Sans;
+  text-align: right;
 }
 
-.teacher-item footer .button:hover {
-  background: var(--color-secundary-dark);
+#avatar-profile p {
+  font-size: 1.25rem; /* 20px of 16px root*/
+  line-height: 1.875rem; /*30px of 16px root*/
+  margin-right: 1.25rem;
+
+  font-weight: 600;
 }
-.teacher-item footer .button svg {
-  margin-right: 0.8rem;
+
+#avatar-profile span {
+  display: block;
+
+  font-weight: normal;
+  font-size: 0.875rem; /* 14px of 16px root*/
+  line-height: 1.5rem; /* 24px of 16px root*/
+
+  font-weight: 400;
 }
 
-@media (min-width: 700px) {
-  #page-index #container {
-      max-width: 100vw;
+#avatar-profile img {
+  width: 4rem; /* 64px of 16px root*/
+  height: 4rem; /* 64px of 16px root*/
+  border-radius: 50%;
+  border: 0.156rem solid #F1972C; /* 2.5px of 16px root*/
+}
+
+/* 
+ * summary
+/* -------------------------------------------------- */
+#summary {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 
+ * summary info
+/* -------------------------------------------------- */
+#summary .info {
+  display:flex;
+  font-family: Inter;
+
+  margin-bottom: 2rem;
+}
+
+.info > div {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  
+  margin-right: 2.5rem; /* 40px of 16px root*/
+}
+
+.info > div > strong {
+  display: block;
+  
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.625rem; /* 26px of 16px root*/
+  
+}
+
+/* 
+ * summary button
+/* -------------------------------------------------- */
+#summary button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  border-radius: 0.313rem; /* 5px of 16px root*/
+
+  padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+
+  text-transform: uppercase;
+
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 0.875rem; /* 14px of 16px root*/
+  line-height: 1.625rem; /* 26px of 16px root*/
+
+  margin-bottom: 2.5rem;
+}
+
+#summary button span::before {
+  width: 2rem;
+  height: 2rem;
+  content: " "; 
+  background-color: var(--color-background);
+  opacity: 0.16;
+  border-radius: 0.313rem; /* 5px of 16px root*/
+
+  position: absolute;
+}
+
+#summary button span {
+  width: 2rem;
+  height: 2rem;
+
+  margin-right: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#summary button span img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* 
+ * main
+/* -------------------------------------------------- */
+main {
+  margin-top: -2.825rem;
+}
+
+
+/* 
+ * CARD
+/* -------------------------------------------------- */
+.card {
+  display: grid;
+  grid-template-columns: 5% 35% 20% 15% 15% 10%;
+  align-items: center;
+
+  margin-bottom:  0.5rem;
+}
+
+.card .column:last-child {
+  justify-self: flex-end;
+}
+
+.card .column > span {
+  display:block;
+
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 0.75rem; /* 12px of 16px root*/
+  text-transform: uppercase;
+
+  color: var(--color-card-label);
+}
+
+.progress .column p {
+  font-weight: 600;
+}
+
+.column.id {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  color: var(--color-card-label);
+}
+
+.column.name {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+}
+
+.column.actions button {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background: var(--color-text);
+
+  border: 1px solid #E1E3E6;
+  border-radius: 0.313rem; /*5px of 16px root*/
+
+  line-height: 0; /* centralize button content */
+}
+
+.column.actions button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media(max-width:1390px) {
+  .card {
+    grid-template-columns: 5% 30% 20% 15% 17.25% 12.25%;
   }
-  .teacher-item header,
-  .teacher-item footer {
-      padding: 32px;
+}
+
+@media(max-width:970px) {
+  .card {
+    grid-template-columns: 31% 23% 13% 20.25% 12.25%;
   }
-  form#search-teachers {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      position: absolute;
-      bottom: -44px;
+  
+  .column.id {
+    display: none;
   }
-  #page-index main {
-      padding: 32px 0;
-      max-width: 740px;
-      margin: 0 auto;
-  }
-  .teacher-item>p {
-      padding: 0 32px;
+}
+
+@media(max-width:770px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "lt rt"
+    "lm rm"
+    "lb rb"
+    ;
+    gap: .5rem;
   }
 
-  .teacher-item footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  .column.id {
+    display: none;
   }
 
-  .teacher-item footer .button {
-      width: 245px;
-      font-size: 16px;
-      justify-content: center;
-      margin-left: 1.6rem;
-      margin-top: 0;
+  .column.name {
+    grid-area: lt;
   }
-
+  .column.deadline {
+    grid-area: lm;
+  }
+  .column.amount {
+    grid-area: lb;
+  }
+  .column.status {
+    justify-self: end;
+    grid-area: rt;
+  }
+  .column.actions{
+    grid-area: rb;
+  }
 }

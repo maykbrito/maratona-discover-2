@@ -10,20 +10,20 @@
 
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
     <link rel="stylesheet" href="/styles/pages/index.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <script src="scripts/index.js" defer></script>
   </head>
   <body id="page-index">
-    <div id="container">
-      <header class="page-header">
-
+    <header class="page-header">
+      <div class="container">
         <section id="top">
           <h2 class="sr-only">Homepage</h2>
           <img id="logo" src="./images/logo.svg" alt="Logo" />
@@ -38,6 +38,8 @@
             />
           </a>
         </section>
+
+        <div class="separator"></div>
 
         <section id="summary">
           <h2 class="sr-only">Sumário</h2>
@@ -57,65 +59,76 @@
             </div>
           </div>
           <button>
-            <img src="./images/plus-24.svg" alt="Novo Job" /> Adicionar novo job
+            <span>
+              <img src="./images/plus-24.svg" alt="Novo Job" /> 
+            </span>
+            Adicionar novo job
           </button>
         </section>
-      </header>
+      </div>
+    </header>
 
+    <div class="container">
       <main>
         <h1 class="sr-only">Trabalhos</h1>
 
         <div class="cards">
-          <div class="card">
-            <div class="id">
-              1
-            </div>
-            <div class="name">
+          <div class="card progress">
+            <div class="id column">1</div>
+            <div class="name column">
               <h3>Pizzaria Guloso</h3>
             </div>
-            <div class="deadline">
+            <div class="deadline column">
               <span>Prazo</span>
-              <strong>3 dias para a entrega</strong>
+              <p>3 dias para a entrega</p>
             </div>
-            <div class="amount">
+            <div class="amount column">
               <span>Valor</span>
-              <strong>R$ 4500,00</strong>
+              <p>R$ 4500,00</p>
             </div>
-            <div class="status">
-              <span>Em andamento</span>
+            <div class="status badge column">
+              Em andamento
             </div>
-            <div class="actions">
+            <div class="actions column">
               <p class="sr-only">Ações</p>
-              <button class="edit" title="Editar Job"><img src="./images/edit-24.svg" alt="Editar Job"></button>
-              <button class="delete" title="Excluir Job"><img src="./images/trash-24.svg" alt="Excluir Job"></button>
-            </div>
-          </div> <!-- end card -->
-        
-          <div class="card">
-            <div class="id">
-              1
-            </div>
-            <div class="name">
-              <h3>Pizzaria Guloso</h3>
-            </div>
-            <div class="deadline">
-              <span>Prazo</span>
-              <strong>3 dias para a entrega</strong>
-            </div>
-            <div class="amount">
-              <span>Valor</span>
-              <strong>R$ 4500,00</strong>
-            </div>
-            <div class="status">
-              <span>Em andamento</span>
-            </div>
-            <div class="actions">
-              <p class="sr-only">Ações</p>
-              <button class="edit" title="Editar Job"><img src="./images/edit-24.svg" alt="Editar Job"></button>
-              <button class="delete" title="Excluir Job"><img src="./images/trash-24.svg" alt="Excluir Job"></button>
+              <button class="edit" title="Editar Job">
+                <img src="./images/edit-24.svg" alt="Editar Job" />
+              </button>
+              <button class="delete" title="Excluir Job">
+                <img src="./images/trash-24.svg" alt="Excluir Job" />
+              </button>
             </div>
           </div>
-        </div><!-- end cards -->
+          <!-- end card -->
+
+          <div class="card done">
+            <div class="id column">2</div>
+            <div class="name column">
+              <h3>OneTwo Project</h3>
+            </div>
+            <div class="deadline column">
+              <span>Prazo</span>
+              <p>3 dias para a entrega</p>
+            </div>
+            <div class="amount column">
+              <span>Valor</span>
+              <p>R$ 4500,00</p>
+            </div>
+            <div class="status badge column">
+              Encerrado
+            </div>
+            <div class="actions column">
+              <p class="sr-only">Ações</p>
+              <button class="edit" title="Editar Job">
+                <img src="./images/edit-24.svg" alt="Editar Job" />
+              </button>
+              <button class="delete" title="Excluir Job">
+                <img src="./images/trash-24.svg" alt="Excluir Job" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- end cards -->
       </main>
     </div>
     <!-- end container -->
