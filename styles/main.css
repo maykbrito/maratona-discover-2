@@ -9,8 +9,9 @@
 :root {
   --color-background: #E5E5E5;
   --color-text: #FCFDFF;
-  --color-secondary: #F1972C;
   --color-primary: #41414C;
+  --color-secondary: #F1972C;
+  --color-secondary-hover: #FA9C2D;
   --color-input-background: #F8F8FC;
   --color-button-text: #FFFFFF;
   --color-hairline-in-dark: #4F4F5B;

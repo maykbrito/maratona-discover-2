@@ -56,6 +56,11 @@
   font-weight: 400;
 }
 
+#avatar-profile p span:hover {
+  text-decoration: underline;
+  color:var(--color-secondary);
+}
+
 #avatar-profile img {
   width: 4rem; /* 64px of 16px root*/
   height: 4rem; /* 64px of 16px root*/
@@ -114,15 +119,21 @@
   border-radius: 0.313rem; /* 5px of 16px root*/
 
   padding: 0.75rem 1.25rem 0.75rem 0.75rem;
-
-  text-transform: uppercase;
-
+  margin-bottom: 2.5rem;
+  
   font-family: IBM Plex Sans;
   font-weight: 700;
   font-size: 0.875rem; /* 14px of 16px root*/
   line-height: 1.625rem; /* 26px of 16px root*/
+  text-transform: uppercase;
 
-  margin-bottom: 2.5rem;
+  transition: all 0.2s;
+
+  cursor: pointer;
+}
+
+#summary button:hover {
+  background-color: var(--color-secondary-hover);
 }
 
 #summary button span::before {
@@ -169,6 +180,36 @@ main {
   align-items: center;
 
   margin-bottom:  0.5rem;
+
+  position: relative;
+
+  transition: all 0.2s;
+}
+
+.card:hover {
+  background: 
+  linear-gradient(90deg, rgba(250, 156, 45, 0.1) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
+    white;
+}
+
+.card::before {
+  content: ' ';
+  
+  width: .25rem;
+  height: 0%;
+  background-color: var(--color-secondary);
+
+  border-radius: .313rem 0 0 .313rem;
+
+  position: absolute;
+  top: 0;
+  left: -1px;
+
+  transition: all .2s;
+}
+
+.card:hover::before {
+  height:100%;
 }
 
 .card .column:last-child {
@@ -213,6 +254,14 @@ main {
   border-radius: 0.313rem; /*5px of 16px root*/
 
   line-height: 0; /* centralize button content */
+
+  transition: all 0.2s;
+
+  cursor: pointer;
+}
+
+.column.actions button:hover {
+  background: #F0F2F5;
 }
 
 .column.actions button img {
