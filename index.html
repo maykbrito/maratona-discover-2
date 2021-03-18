@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/partials/page-header.css" />
     <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/modal.css" />
     <link rel="stylesheet" href="/styles/pages/index.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,7 +21,7 @@
     />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" defer type="module"></script>
 
   </head>
   <body id="page-index">
@@ -75,7 +76,7 @@
         <h1 class="sr-only">Trabalhos</h1>
 
         <div class="cards">
-          <div class="card progress">
+          <div class="card progress" data-id="1">
             <div class="id column">1</div>
             <div class="name column">
               <h3>Pizzaria Guloso</h3>
@@ -103,7 +104,7 @@
           </div>
           <!-- end card -->
 
-          <div class="card done">
+          <div class="card done" data-id="2">
             <div class="id column">2</div>
             <div class="name column">
               <h3>OneTwo Project</h3>
@@ -134,5 +135,20 @@
       </main>
     </div>
     <!-- end container -->
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <img src="./images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
+        <h3>Excluir Job</h3>
+        <p>Quer mesmo excluir esse job? <br/>
+        Ele será apagado para sempre.  
+        <p>
+        <footer>
+          <button>Cancelar</button>
+          <button>Excluir Job</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end modal-wrapper -->
   </body>
 </html>
