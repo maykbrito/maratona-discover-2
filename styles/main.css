@@ -7,7 +7,7 @@
 
 /* custom vars */
 :root {
-  --color-background: #E5E5E5;
+  --color-background: #F0F2F5;
   --color-text: #FCFDFF;
 
   --color-primary: #41414C;
@@ -17,7 +17,9 @@
   --color-input-background: #F8F8FC;
   --color-button-text: #FFFFFF;
   --color-hairline-in-dark: #4F4F5B;
+  --color-hairline-in-light: #E1E3E5;
 
+  --color-card-background: var(--color-text);
   --color-card-title: #5A5A66;
   --color-card-label: #BFBFCC;
   --color-card-content: #787880;
@@ -31,6 +33,7 @@
   --color-badge-done-text: var(--color-delete);
   --color-badge-done-background:#FAECEB;
 
+  --color-header-inner-title: var(--color-card-label)
 
 }
 
@@ -92,7 +95,11 @@ textarea {
 }
 
 .separator {
-  height: 0.094rem;
+  height: 1.5px;
   background-color: var(--color-hairline-in-dark);
   margin: 1rem 0;
+}
+
+.separator.light {
+  background-color: #E1E3E5;
 }
