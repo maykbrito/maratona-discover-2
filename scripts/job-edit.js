@@ -1,6 +1,6 @@
 import Modal from './modal.js';
 
-var modal = Modal({ gsap })
+const modal = Modal({ animateClasses: ['animate-pop', 'back'] })
 
 document
   .querySelector('.open-modal')

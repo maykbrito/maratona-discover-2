@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles/partials/cards.css" />
     <link rel="stylesheet" href="/styles/partials/buttons.css" />
     <link rel="stylesheet" href="/styles/partials/modal.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
     <link rel="stylesheet" href="/styles/pages/index.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -21,14 +22,13 @@
       rel="stylesheet"
     />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="scripts/index.js" defer type="module"></script>
 
   </head>
   <body id="page-index">
     <header class="page-header">
       <div class="container">
-        <section id="top">
+        <section id="top" class="animate-up">
           <h2 class="sr-only">Homepage</h2>
           <img id="logo" src="./images/logo.svg" alt="Logo" />
           <span id="notification">
@@ -45,7 +45,7 @@
 
         <div class="separator"></div>
 
-        <section id="summary">
+        <section id="summary" class="animate-up delay-1">
           <h2 class="sr-only">Sumário</h2>
 
           <div class="info">
@@ -73,7 +73,7 @@
     </header>
 
     <div class="container">
-      <main>
+      <main class="animate-up delay-2">
         <h1 class="sr-only">Trabalhos</h1>
 
         <div class="cards">
@@ -93,14 +93,19 @@
             <div class="status badge column">
               Em andamento
             </div>
-            <div class="actions column">
+            <div class="actions column flex">
               <p class="sr-only">Ações</p>
-              <button class="edit" title="Editar Job">
+              <a 
+                href="job-edit.html" 
+                class="button white edit" 
+                title="Editar Job">
                 <img src="./images/edit-24.svg" alt="Editar Job" />
-              </button>
-              <button class="delete" title="Excluir Job">
-                <img src="./images/trash-24.svg" alt="Excluir Job" />
-              </button>
+              </a>
+              <a 
+                href="/jobs/status/toggle?id=1"
+                class="button white" title="Mudar Status">
+                <img src="./images/stop.svg" alt="Imagem Stop" />
+              </a>
             </div>
           </div>
           <!-- end card -->
@@ -121,14 +126,20 @@
             <div class="status badge column">
               Encerrado
             </div>
-            <div class="actions column">
+            <div class="actions column flex">
               <p class="sr-only">Ações</p>
-              <button class="edit" title="Editar Job">
+              <a 
+                href="job-edit.html" 
+                class="button white edit" 
+                title="Editar Job">
                 <img src="./images/edit-24.svg" alt="Editar Job" />
-              </button>
-              <button class="delete" title="Excluir Job">
-                <img src="./images/trash-24.svg" alt="Excluir Job" />
-              </button>
+            </a>
+              <a 
+                href="/jobs/status/toggle?id=2"
+                class="button white" 
+                title="Mudar Status">
+                <img src="./images/play.svg" alt="Imagem Play" />
+              </a>
             </div>
           </div>
         </div>
@@ -136,29 +147,5 @@
       </main>
     </div>
     <!-- end container -->
-
-    <div class="modal-wrapper">
-      <div class="modal">
-        <img src="./images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
-        <h3>Excluir Job</h3>
-        <p>Quer mesmo excluir esse job? <br/>
-        Ele será apagado para sempre.  
-        <p>
-        <footer>
-          <a 
-            class="button gray" 
-            href="#">Cancelar</a>
-          <button
-            class="button red"
-            type="submit"
-            form="delete-job">Excluir Job</button>
-        </footer>
-      </div>
-      <form 
-        method="DELETE" 
-        action="/delete" 
-        id="delete-job"></form>
-    </div>
-    <!-- end modal-wrapper -->
   </body>
 </html>

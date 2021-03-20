@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/partials/buttons.css" />
     <link rel="stylesheet" href="/styles/partials/forms.css" />
     <link rel="stylesheet" href="/styles/partials/modal.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
     <link rel="stylesheet" href="/styles/pages/job.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,13 +23,12 @@
       rel="stylesheet"
     />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script type="module" src="./scripts/job-edit.js"></script>
     
   </head>
   <body id="page-job-edit">
     <header class="page-header inner">
-      <div class="container">
+      <div class="container animate-up">
         <a href="index.html" class="back">
           <img src="./images/back.svg" alt="" />
         </a>
@@ -36,8 +36,7 @@
       </div>
     </header>
 
-    <div class="container flex">
-      <main>
+    <div class="container flex animate-up delay-2">
         <form id="form-job">
           <fieldset>
             <legend>Dados do Job</legend>
@@ -45,7 +44,12 @@
 
             <div class="input-wrapper">
               <label for="name">Nome do Job</label>
-              <input type="text" id="name" name="name" />
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                value="Pizzaria Guloso"
+              />
             </div>
 
             <div class="input-group">
@@ -56,7 +60,8 @@
                   type="number"
                   step="0.1" 
                   id="daily-hours" 
-                  name="daily-hours"/>
+                  name="daily-hours"
+                  value="2"/>
               </div>
 
               <div class="input-wrapper">
@@ -65,7 +70,8 @@
                 <input 
                   type="number"
                   id="total-hours" 
-                  name="total-hours" />
+                  name="total-hours"
+                  value="40" />
               </div>
             </div>
           </fieldset>
@@ -118,7 +124,7 @@
       </div>
       <form 
         method="DELETE" 
-        action="/delete" 
+        action="/jobs/delete/{JOBID}" 
         id="delete-job"></form>
     </div>
     <!-- end modal-wrapper -->

@@ -222,26 +222,6 @@ main {
   line-height: 2.125rem;
 }
 
-.column.actions button {
-  width: 2.5rem;
-  height: 2.5rem;
-
-  background: var(--color-text);
-
-  border: 1px solid #E1E3E6;
-  border-radius: 0.313rem; /*5px of 16px root*/
-
-  line-height: 0; /* centralize button content */
-
-  transition: all 0.2s;
-
-  cursor: pointer;
-}
-
-.column.actions button:hover {
-  background: #F0F2F5;
-}
-
 .column.actions button img {
   width: 1.5rem;
   height: 1.5rem;
