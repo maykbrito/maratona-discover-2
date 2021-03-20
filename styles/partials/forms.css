@@ -19,16 +19,13 @@ fieldset .separator {
   margin-bottom: 2rem;
 }
 
-form .input-cols {
+form .input-group {
   display: flex;
-}
-
-form .input-cols .input-wrapper + .input-wrapper {
-  margin-left: 1.5rem;
-}
-
-form .input-cols + .input-cols {
   margin-top: 1.5rem;
+}
+
+form .input-group .input-wrapper + .input-wrapper {
+  margin-left: 1.5rem;
 }
 
 label {

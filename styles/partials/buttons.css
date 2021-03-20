@@ -1,6 +1,7 @@
 .button {
   padding: 0.75rem 3rem;
   border-radius: 0.313rem;
+  border: 0;
 
   font-family: IBM Plex Sans;
   font-weight: 700;
@@ -11,6 +12,14 @@
   transition: all .2s;
 
   cursor:pointer;
+
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+}
+
+button.button {
+  line-height: 1.5rem;
 }
 
 .button.orange {
@@ -47,4 +56,13 @@
 
 .button.red:hover {
   background: #FA3F38;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button-group .button + .button {
+  margin-left: 1rem;
 }

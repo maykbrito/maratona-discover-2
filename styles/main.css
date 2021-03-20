@@ -76,6 +76,10 @@ textarea {
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* basic classes */
 .container {
   width: min(1440px, 90vw);
@@ -95,11 +99,15 @@ textarea {
 }
 
 .separator {
-  height: 1.5px;
+  height: 1px;
   background-color: var(--color-hairline-in-dark);
   margin: 1rem 0;
 }
 
 .separator.light {
   background-color: #E1E3E5;
+}
+
+.flex {
+  display: flex;
 }

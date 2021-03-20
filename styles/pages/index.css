@@ -109,34 +109,12 @@
 /* 
  * summary button
 /* -------------------------------------------------- */
-#summary button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--color-text);
-  background-color: var(--color-secondary);
-  border-radius: 0.313rem; /* 5px of 16px root*/
-
+#summary .button {
   padding: 0.75rem 1.25rem 0.75rem 0.75rem;
   margin-bottom: 2.5rem;
-  
-  font-family: IBM Plex Sans;
-  font-weight: 700;
-  font-size: 0.875rem; /* 14px of 16px root*/
-  line-height: 1.625rem; /* 26px of 16px root*/
-  text-transform: uppercase;
-
-  transition: all 0.2s;
-
-  cursor: pointer;
 }
 
-#summary button:hover {
-  background-color: var(--color-secondary-hover);
-}
-
-#summary button span::before {
+#summary .button span::before {
   width: 2rem;
   height: 2rem;
   content: " "; 
@@ -147,7 +125,7 @@
   position: absolute;
 }
 
-#summary button span {
+#summary .button span {
   width: 2rem;
   height: 2rem;
 
@@ -158,7 +136,7 @@
   align-items: center;
 }
 
-#summary button span img {
+#summary .button span img {
   width: 1.5rem;
   height: 1.5rem;
 }
