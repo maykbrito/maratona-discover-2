@@ -2,8 +2,8 @@ export default function Modal({ gsap }) {
 
   const wrapper = document.querySelector('.modal-wrapper');
   const element = document.querySelector('.modal');
-  const cancelButton = element.querySelector("footer button:nth-child(1)")
-  const deleteButton = element.querySelector("footer button:nth-child(2)")
+  const cancelButton = element.querySelector("footer .button:nth-child(1)")
+  const okButton = element.querySelector("footer .button:nth-child(2)")
 
   function open() {
     if (gsap) {
@@ -23,7 +23,7 @@ export default function Modal({ gsap }) {
     wrapper.classList.add('on')
   }
 
-  cancelButton.onclick = () => {
+  function close() {
     if (gsap) {
       gsap.fromTo(".modal", {
         scale: 1, 
@@ -43,13 +43,16 @@ export default function Modal({ gsap }) {
     }
   }
 
+  cancelButton.addEventListener('click', close)
+
   function ok(cb) {
-    deleteButton.onclick = cb
+    okButton.onclick = cb
   }
   
   return  {
     open,
-    ok
+    close,
+    ok,
   }
 
 }

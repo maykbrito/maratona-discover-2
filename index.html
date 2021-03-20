@@ -145,10 +145,19 @@
         Ele será apagado para sempre.  
         <p>
         <footer>
-          <button>Cancelar</button>
-          <button>Excluir Job</button>
+          <a 
+            class="button gray" 
+            href="#">Cancelar</a>
+          <button
+            class="button red"
+            type="submit"
+            form="delete-job">Excluir Job</button>
         </footer>
       </div>
+      <form 
+        method="DELETE" 
+        action="/delete" 
+        id="delete-job"></form>
     </div>
     <!-- end modal-wrapper -->
   </body>

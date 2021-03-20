@@ -63,6 +63,6 @@ button.button {
   align-items: center;
 }
 
-.button-group .button + .button {
+.button + .button {
   margin-left: 1rem;
 }

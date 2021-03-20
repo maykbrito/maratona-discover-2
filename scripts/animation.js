@@ -14,7 +14,7 @@ export default function Animation() {
     delay: 0.2 * timmingFactor, 
     ease: "back"
   })
-  gsap.from("#summary button", {
+  gsap.from("#summary .button", {
     x: 35, opacity: 0, 
     duration: 0.2 * timmingFactor, 
     delay: 0.2 * timmingFactor, 
