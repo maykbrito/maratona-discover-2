@@ -10,6 +10,8 @@ const server = express()
 // Response: resposta do servidor
 // 2. server.get('/', (request, response) => response.send('mensagem de retorno'))
 
+// configure static files middleware
+server.use(express.static('public'))
 
 // Enviar .html
 server.get('/', (request, response) => {
@@ -17,7 +19,7 @@ server.get('/', (request, response) => {
   // caminho precisa ser absoluto até o diretório raiz
   // o que é caminho absoluto?
   // o que é diretório raiz?
-  response.sendFile(__dirname + '/index.html')
+  response.sendFile(__dirname + '/views/index.html')
 })
 
 server.listen(3000, () => console.log('server on'))
