@@ -74,10 +74,7 @@
       </main>
       <aside class="card">
         <img src="/images/money-color.svg" alt="Imagem de Dinheiro">
-        <p>
-          Preencha os dados ao lado para
-          ver o valor do projeto
-        </p>
+        <p>O valor do projeto ficou em <strong>R$ 4576,00</strong></p>
         <div class="button-group">
           <button 
             class="button green" 
@@ -117,8 +114,8 @@
         </footer>
       </div>
       <form 
-        method="DELETE" 
-        action="/jobs/delete/{JOBID}" 
+        method="post" 
+        action="/job/delete/{JOBID}" 
         id="delete-job"></form>
     </div>
     <!-- end modal-wrapper -->
