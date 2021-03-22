@@ -87,7 +87,7 @@ const Job = {
       res.render(views + '/index', { jobs: updateJobs })
     },
     create(req, res){
-      const lastId = Job.data[Job.data.length - 1].id
+      const lastId = Job.data[Job.data.length - 1]?.id || 1
 
       Job.data.push({
         id: lastId + 1,
@@ -101,7 +101,6 @@ const Job = {
     },
     show(req, res) {
       const jobId = req.params.id
-
       const job = Job.data.find(job => Number(job.id) === Number(jobId))
 
       if(!job) {
@@ -111,6 +110,38 @@ const Job = {
       job.budget = Job.service.calculateBudget(job).toFixed(2).replace(".", ",")
 
       res.render(views + '/job-edit', { job })
+    },
+    update(req, res) {
+      const jobId = req.params.id
+      const job = Job.data.find(job => Number(job.id) === Number(jobId))
+
+      if(!job) {
+        return res.send("Job not found!")
+      }
+      
+      const updatedJob = {
+        ...job,
+        name: req.body.name,
+        "total-hours": req.body["total-hours"],
+        "daily-hours": req.body["daily-hours"],
+      }
+
+      Job.data = Job.data.map( job => {
+        if(Number(job.id) === Number(jobId)) {
+          job = updatedJob
+        }
+
+        return job
+      })
+
+      res.redirect('/job/' + jobId)
+    },
+    delete(req, res) {
+      const jobId = req.params.id
+
+      Job.data = Job.data.filter( job => Number(job.id) !== Number(jobId) )
+
+      res.redirect('/')
     }
   },
   service: {
@@ -125,5 +156,7 @@ routes
   .get('/job', (req, res) => res.render(views + '/job'))
   .post('/job', Job.controller.create)
   .get('/job/:id', Job.controller.show)
+  .post('/job/:id', Job.controller.update)
+  .post('/job/delete/:id', Job.controller.delete)
 
 module.exports = routes
