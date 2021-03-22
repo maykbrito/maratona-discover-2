@@ -22,6 +22,7 @@
       rel="stylesheet"
     />
 
+    <script src="scripts/index.js" defer type="module"></script>
   </head>
   <body id="page-index">
     <header class="page-header">
@@ -99,11 +100,9 @@
                 title="Editar Job">
                 <img src="./images/edit-24.svg" alt="Editar Job" />
               </a>
-              <a 
-                href="/jobs/status/toggle?id=1"
-                class="button white" title="Mudar Status">
-                <img src="./images/stop.svg" alt="Imagem Stop" />
-              </a>
+              <button class="delete button white" title="Excluir Job">
+                <img src="./images/trash-24.svg" alt="Excluir Job" />
+              </button>
             </div>
           </div>
           <!-- end card -->
@@ -131,13 +130,10 @@
                 class="button white edit" 
                 title="Editar Job">
                 <img src="./images/edit-24.svg" alt="Editar Job" />
-            </a>
-              <a 
-                href="/jobs/status/toggle?id=2"
-                class="button white" 
-                title="Mudar Status">
-                <img src="./images/play.svg" alt="Imagem Play" />
               </a>
+              <button class="delete button white" title="Excluir Job">
+                <img src="./images/trash-24.svg" alt="Excluir Job" />
+              </button>
             </div>
           </div>
         </div>
@@ -145,5 +141,29 @@
       </main>
     </div>
     <!-- end container -->
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <img src="./images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
+        <h3>Excluir Job</h3>
+        <p>Quer mesmo excluir esse job? <br/>
+        Ele será apagado para sempre.  
+        <p>
+        <footer>
+          <a 
+            class="button gray" 
+            href="#">Cancelar</a>
+          <button
+            class="button red"
+            type="submit"
+            form="delete-job">Excluir Job</button>
+        </footer>
+      </div>
+      <form 
+        method="DELETE" 
+        action="/delete" 
+        id="delete-job"></form>
+    </div>
+    <!-- end modal-wrapper -->
   </body>
 </html>
