@@ -84,11 +84,15 @@
             </div>
             <div class="deadline column">
               <span>Prazo</span>
-              <p><%= job.remaining %> dias para a entrega</p>
+              <% if(job.status === "progress") { %> 
+                <p><%= job.remaining %> dias para a entrega</p>
+              <% } else { %>
+                <p>Prazo encerrado</p>
+              <% } %> 
             </div>
             <div class="amount column">
               <span>Valor</span>
-              <p>R$ <%= job.total.toFixed(2).replace('.', ",") %></p>
+              <p>R$ <%= job.budget.toFixed(2).replace('.', ",") %></p>
             </div>
             <div class="status badge column">
               <%= job.status === 'done' ? 'Encerrado': 'Em andamento' %>
@@ -96,7 +100,7 @@
             <div class="actions column flex">
               <p class="sr-only">Ações</p>
               <a 
-                href="/job/edit" 
+                href="/job/<%= job.id %>" 
                 class="button white edit" 
                 title="Editar Job">
                 <img src="/images/edit-24.svg" alt="Editar Job" />
